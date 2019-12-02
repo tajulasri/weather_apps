@@ -84,7 +84,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   SizedBox(height: 15),
                   Text(
-                    "Sun, 2 Dec",
+                    "Mon, 2 Dec",
                     style:
                         TextStyle(fontWeight: FontWeight.w300, fontSize: 16.0),
                   ),

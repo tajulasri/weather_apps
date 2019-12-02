@@ -5,10 +5,10 @@ class MoreDays extends StatelessWidget {
   //const MoreDays({Key key}) : super(key: key);
 
   List wheatherData = [
-    Wheather("Sunday", "sunny", "17 \u00b0"),
-    Wheather("Monday", "sunny", "18 \u00b0"),
-    Wheather("Tuesday", "sunny", "20 \u00b0"),
-    Wheather("Wednesday", "Rain", "22 \u00b0"),
+    Wheather("Sunday", "Sunny", "17 \u00b0"),
+    Wheather("Monday", "Sunny", "18 \u00b0"),
+    Wheather("Tuesday", "Sunny", "20 \u00b0"),
+    Wheather("Wednesday", "Heavy Rain", "22 \u00b0"),
     Wheather("Thursday", "Cloudy", "18 \u00b0"),
     Wheather("Friday", "Cloudy", "18 \u00b0"),
     Wheather("Saturday", "Cloudy", "18 \u00b0"),
@@ -24,20 +24,39 @@ class MoreDays extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Text(
-              item.time,
-              style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 17.0,
-                  color: Colors.black),
+            Container(
+              //color: Colors.greenAccent,
+              width: 90,
+              child: Text(
+                item.time,
+                style: TextStyle(
+                    fontWeight: FontWeight.w400,
+                    fontSize: 17.5,
+                    color: Colors.black),
+              ),
             ),
-            Icon(Icons.wb_sunny, color: Colors.blue),
+            Container(
+              child: Column(
+                children: <Widget>[
+                  Icon(Icons.wb_cloudy, color: Colors.indigo[300], size: 30.0),
+                  Text(
+                    item.wheatherSituation,
+                    style: TextStyle(
+                      color: Colors.black54,
+                      fontWeight: FontWeight.w600,
+                      fontSize: 15.0,
+                    ),
+                  ),
+                ],
+              ),
+            ),
             Text(
               item.temperature,
               style: TextStyle(
-                  fontSize: 18.0,
-                  fontWeight: FontWeight.w500,
-                  color: Colors.blueGrey),
+                fontSize: 18.0,
+                fontWeight: FontWeight.w500,
+                color: Colors.blueGrey,
+              ),
             ),
           ],
         ),
